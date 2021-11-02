@@ -47,7 +47,6 @@ protected:
   std::string buttons_publisher_topic_;
   // Topic to publish slip status to
   std::string slip_status_publisher_topic_;
-
   // Topic to subscribe to light ring vector
   std::string lightring_subscription_topic_;
 
