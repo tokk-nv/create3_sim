@@ -199,7 +199,8 @@ void RobotState::kidnap_callback(irobot_create_msgs::msg::HazardDetectionVector:
   kidnap_status_msg_.header.stamp = now();
   // Set kidnap status. The robot is kidnapped when both wheel drops
   // and the four cliff sensors are triggered.
-  kidnap_status_msg_.is_kidnapped = wheel_drop_count >= 2 && cliff_sensor_count >= 4;
+  kidnap_status_msg_.is_kidnapped = wheel_drop_count >= min_wheel_drop_count_ &&
+    cliff_sensor_count >= min_cliff_sensor_count_;
 
   // Publish topics
   kidnap_status_publisher_->publish(kidnap_status_msg_);

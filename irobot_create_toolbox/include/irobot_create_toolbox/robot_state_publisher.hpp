@@ -104,6 +104,9 @@ protected:
   const double battery_capacity_ {2.046};
   const double battery_default_temp_ {27.0};
 
+  const double min_wheel_drop_count_ {2};
+  const double min_cliff_sensor_count_ {4};
+
   const std::string base_frame_ {"base_link"};
 };
 
