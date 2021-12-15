@@ -17,6 +17,11 @@ Required dependencies:
     - [rosdep](https://pypi.org/project/rosdep/): Used to install dependencies when building from sources
     - [vcs](https://pypi.org/project/vcstool/): Automates cloning of git repositories declared on a YAML file.
 
+```
+sudo apt install python3-colcon-common-extensions ros-galactic-xacro python3-vcstool python3-rosdep2 
+sudo apt install ros-galactic-control-msgs ros-galactic-realtime-tools
+```
+
 ## Build
 
 - Create a workspace if you don't already have one:
